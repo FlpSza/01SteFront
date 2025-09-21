@@ -17,8 +17,8 @@ function App() {
     try {
       setLoading(true);
       const [responsesRes, statsRes] = await Promise.all([
-        axios.get(`${import.meta.env.VITE_API_URL || 'https://18.118.160.254:3001'}/api/responses`),
-        axios.get(`${import.meta.env.VITE_API_URL || 'https://18.118.160.254:3001'}/api/stats`)
+        axios.get('https://adminste.shop/api/responses'),
+        axios.get('https://adminste.shop/api/stats')
       ]);
       
       setResponses(responsesRes.data.responses);
